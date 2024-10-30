@@ -2,7 +2,7 @@ package models
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/penggy/EasyGoLib/utils"
+	"github.com/catseeker/EasyGoLib/utils"
 )
 
 type User struct {
