@@ -1,8 +1,9 @@
 package models
 
 import (
-	"github.com/penggy/EasyGoLib/db"
-	"github.com/penggy/EasyGoLib/utils"
+	"fmt"
+	"github.com/catseeker/EasyGoLib/db"
+	"github.com/catseeker/EasyGoLib/utils"
 )
 
 func Init() (err error) {
@@ -19,9 +20,11 @@ func Init() (err error) {
 	if count == 0 {
 		db.SQLite.Create(&User{
 			Username: defUser,
-			Password: utils.MD5(defPass),
+			Password: defPass,
+			//Password: utils.MD5(defPass),
 		})
 	}
+	fmt.Printf("defUser=$s defPass=%s\n", defUser, defPass)
 	return
 }
 
