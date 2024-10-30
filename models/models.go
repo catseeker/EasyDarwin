@@ -24,7 +24,7 @@ func Init() (err error) {
 			//Password: utils.MD5(defPass),
 		})
 	}
-	fmt.Printf("defUser=$s defPass=%s\n", defUser, defPass)
+	fmt.Printf("defUser=%s defPass=%s\n", defUser, defPass)
 	return
 }
 
